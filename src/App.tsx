@@ -6,7 +6,7 @@ import {BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom';
 
 function App() {
   return (
-    <Router>
+    <Router basename="/h2/">
       <Route path="/login" component={LoginPage} />
       <Route path="/search/user" component={SearchUserPage} />
       <Route path="/search/club" component={SearchClubPage} />

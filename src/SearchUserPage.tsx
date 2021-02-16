@@ -51,7 +51,7 @@ class SearchUserPage extends React.Component {
     clearTimeout(this.searchDebounce);
     this.searchDebounce = window.setTimeout(() => {
       this.doTheSearch();
-    }, 1000);
+    }, 500);
   };
   private async doTheSearch() {
     const originalText = this.state.searchText;
@@ -59,7 +59,6 @@ class SearchUserPage extends React.Component {
       this.setState({searchResult: []});
       return;
     }
-    console.log('doing the search!', originalText);
     const response = await apiPost('search_users', {
       cofollows_only: false,
       following_only: false,
